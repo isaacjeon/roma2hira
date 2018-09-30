@@ -1,3 +1,3 @@
 $.getJSON("romaji-hiragana.json", function (json) {
-       console.log(json);
+       document.getElementById("romaji").value = json;
 });
