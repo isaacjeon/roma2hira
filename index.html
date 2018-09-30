@@ -8,15 +8,19 @@
 <body>
   <h1>Romaji to Hiragana Converter</h1>
   
-  <div>
-  <label for="romaji">Romaji</label><br>
-  <textarea id="romaji" name="romaji"></textarea>
-  </div>
-  <i class="fa fa-arrow-right"></i>
-  <div>
-  <label for="hiragana">ひらがな</label><br>
-  <textarea id="hiragana" name="hiragana"></textarea>
-  </div>
+  <table>
+    <tr>
+      <th>Romaji</th>
+      <td><textarea id="romaji" name="romaji"></textarea></td>
+    </tr>
+    <tr>
+      <td><i class="fa fa-arrow-right"></i></td>
+    </tr>
+    <tr>
+      <th>ひらがな</th>
+      <td><textarea id="hiragana" name="hiragana"></textarea></th>
+    </tr>
+  </table>
 
   <script type="text/javascript" src="convert.js"></script>
 </body>
