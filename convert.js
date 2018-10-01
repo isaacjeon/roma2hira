@@ -29,7 +29,7 @@ function convert(){
                         } else {
                             hstr += first;
                         }
-                    else {
+                    } else {
                         hstr += first;
                     }
                 } else {
