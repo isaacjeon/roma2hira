@@ -1,3 +1,3 @@
 document.getElementById("button").onclick = function(){
-    document.getElementById("hiragana").defaultValue = r2h;
+    document.getElementById("hiragana").defaultValue = r2h.ka;
 };
