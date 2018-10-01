@@ -12,6 +12,6 @@ var json = (function () {
     return json;
 })(); 
 
-document.getElementById("romaji").oninput = function(){
+document.getElementById("button").onclick = function(){
     document.getElementById("hiragana").defaultValue = "hi";
 };
