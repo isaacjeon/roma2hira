@@ -30,6 +30,7 @@ function convert(){
             }
         }
     }
+    document.getElementById("hiragana").value = hstr;
 }
 
 function isVowel(x){
