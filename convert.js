@@ -53,5 +53,5 @@ function isVowel(x){
 }
 
 function isLetter(x) {
-  return x.match(/[a-z]/i);
+    return x.match(/[a-z]/i);
 }
