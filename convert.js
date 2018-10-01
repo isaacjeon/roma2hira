@@ -21,12 +21,13 @@ function convert(){
                 } else if (first == second) {
                 hstr += "っ";
                 } else {
-                temp = eval("r2h." + first + second + third);
-                if (temp != undefined) {
-                    rstr = rstr.slice(1);
-                    hstr += temp;
-                } else {
-                    hstr += first;
+                    temp = eval("r2h." + first + second + third);
+                    if (temp != undefined) {
+                        rstr = rstr.slice(1);
+                        hstr += temp;
+                    } else {
+                        hstr += first;
+                    }
                 }
             }
         } else {
