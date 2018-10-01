@@ -8,27 +8,29 @@ function convert(){
         var second = rstr.charAt(1);
         var third = rstr.charAt(2);        
         var rstr = rstr.slice(1);
-        if (isVowel(first) || first == ".") {
-            hstr += eval("r2h." + first);
-            continue;
-        }
-        var temp = eval("r2h." + first + second);
-        if (temp != undefined) {
-            rstr = rstr.slice(1);
-            hstr += temp;
-        } else if (first == 'n') {
-            hstr += eval("r2h." + first);
-        } else if (first == second) {
-            hstr += "っ";
-        }
-        else {
-            temp = eval("r2h." + first + second + third);
-            if (temp != undefined) {
-                rstr = rstr.slice(1);
-                hstr += temp;
+        if (isLetter(first)) {            
+            if (isVowel(first)) {
+                hstr += eval("r2h." + first);
             } else {
-                hstr += first;
+                var temp = eval("r2h." + first + second);
+                if (temp != undefined) {
+                    rstr = rstr.slice(1);
+                    hstr += temp;
+                } else if (first == 'n') {
+                  hstr += eval("r2h." + first);
+                } else if (first == second) {
+                hstr += "っ";
+                } else {
+                temp = eval("r2h." + first + second + third);
+                if (temp != undefined) {
+                    rstr = rstr.slice(1);
+                    hstr += temp;
+                } else {
+                    hstr += first;
+                }
             }
+        } else {
+            hstr += first
         }
     }
     document.getElementById("hiragana").value = hstr;
@@ -39,4 +41,8 @@ function isVowel(x){
         return true;
     else
         false;
+}
+
+function isLetter(x) {
+  return x.match(/[a-z]/i);
 }
