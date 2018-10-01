@@ -13,5 +13,5 @@ var json = (function () {
 })(); 
 
 document.getElementById("button").onclick = function(){
-    document.getElementById("hiragana").defaultValue = "hi";
+    document.getElementById("hiragana").defaultValue = json;
 };
