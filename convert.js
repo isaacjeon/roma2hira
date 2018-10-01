@@ -32,6 +32,8 @@ function convert(){
                     } else {
                         hstr += first;
                     }
+                } else if (first == 'n') {
+                     hstr += eval("r2h." + first);
                 } else {
                     hstr += first;
                 }
