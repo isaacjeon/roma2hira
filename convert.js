@@ -12,22 +12,32 @@ function convert(){
             if (isVowel(first)) {
                 hstr += eval("r2h." + first);
             } else {
-                var temp = eval("r2h." + first + second);
-                if (temp != undefined) {
-                    rstr = rstr.slice(1);
-                    hstr += temp;
-                } else if (first == 'n') {
-                  hstr += eval("r2h." + first);
-                } else if (first == second) {
-                hstr += "っ";
-                } else {
-                    temp = eval("r2h." + first + second + third);
+                if (isLetter(second)) {
+                    var temp = eval("r2h." + first + second);
                     if (temp != undefined) {
                         rstr = rstr.slice(1);
                         hstr += temp;
+                    } else if (first == 'n') {
+                        hstr += eval("r2h." + first);
+                    } else if (first == second) {
+                        hstr += "っ";
                     } else {
-                        hstr += first;
+                        if (isLetter(third)) {
+                            temp = eval("r2h." + first + second + third);
+                            if (temp != undefined) {
+                                rstr = rstr.slice(1);
+                                hstr += temp;
+                            } else {
+                            hstr += first;
+                            }
+                        } else {
+                            rstr = rstr.slice(2);
+                            hstr += first + second + third;
+                        }
                     }
+                } else {
+                    rstr = rstr.slice(1);
+                    hstr += first + second;
                 }
             }
         } else {
