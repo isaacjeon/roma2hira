@@ -21,23 +21,19 @@ function convert(){
                         hstr += eval("r2h." + first);
                     } else if (first == second) {
                         hstr += "っ";
-                    } else {
-                        if (isLetter(third)) {
-                            temp = eval("r2h." + first + second + third);
-                            if (temp != undefined) {
-                                rstr = rstr.slice(1);
-                                hstr += temp;
-                            } else {
-                            hstr += first;
-                            }
+                    } else if (isLetter(third)) {
+                        temp = eval("r2h." + first + second + third);
+                        if (temp != undefined) {
+                            rstr = rstr.slice(1);
+                            hstr += temp;
                         } else {
-                            rstr = rstr.slice(2);
-                            hstr += first + second + third;
+                            hstr += first;
                         }
+                    else {
+                        hstr += first;
                     }
                 } else {
-                    rstr = rstr.slice(1);
-                    hstr += first + second;
+                    hstr += first;
                 }
             }
         } else {
