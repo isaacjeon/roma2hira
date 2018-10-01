@@ -1,2 +1,2 @@
-# roma2hira
+# romaji2hiragana
 Romaji to Hiragana converter
