@@ -1,3 +1,5 @@
-document.getElementById("button").onclick = function(){
-    document.getElementById("hiragana").defaultValue = r2h.ka;
-};
+document.getElementById("button").onclick = function(){convert()};
+
+function convert(){
+    document.getElementById("hiragana").value = document.getElementById("romaji").value;
+}
