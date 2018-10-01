@@ -24,7 +24,7 @@ function convert(){
                     } else if (isLetter(third)) {
                         temp = eval("r2h." + first + second + third);
                         if (temp != undefined) {
-                            rstr = rstr.slice(1);
+                            rstr = rstr.slice(2);
                             hstr += temp;
                         } else {
                             hstr += first;
