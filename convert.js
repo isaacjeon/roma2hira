@@ -12,4 +12,6 @@ var json = (function () {
     return json;
 })(); 
 
-document.getElementById("romaji").value = "hi";
+document.getElementById("romaji").oninput = function(){
+    document.getElementById("hiragana").value = "hi";
+}
