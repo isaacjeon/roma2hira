@@ -14,4 +14,4 @@ var json = (function () {
 
 document.getElementById("romaji").oninput = function(){
     document.getElementById("hiragana").value = "hi";
-}
+};
