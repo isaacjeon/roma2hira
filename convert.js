@@ -20,6 +20,7 @@ function convert(){
             hstr += eval("r2h." + first);
         } else if (first == second) {
             hstr += "っ";
+        }
         else {
             temp = eval("r2h." + first + second + third);
             if (temp != undefined) {
